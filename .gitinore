@@ -1,0 +1,55 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# Distributions
+dist/
+build/
+*.egg
+*.whl
+
+# Custom configuration files
+*.local
+.env
+.flaskenv
+
+# Django stuff:
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Media and static files
+/media/
+/static/
+/staticfiles/
+
+# Database
+*.sqlite3
+/db.sqlite3
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.bak
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Windows thumbnail cache
+ehthumbs.db
+
+# macOS specific files
+.DS_Store
+.Trashes
+._*

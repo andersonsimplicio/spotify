@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify Clone</title>
+    <title>Spotify</title>
     <link rel="stylesheet" href="{% static 'spotify/estilo.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
@@ -60,7 +60,7 @@
                             <p>Playlist • Spotify</p>
                         </div>
                     </div>
-                    </div>
+                </div>
             </div>
         </aside>
 
@@ -77,8 +77,17 @@
                     <button class="install-app-btn"><i class="fas fa-download"></i> Instalar aplicativo</button>
                     <button class="user-bell"><i class="far fa-bell"></i></button>
                     <div class="user-profile">
-                        <img src="https://via.placeholder.com/30" alt="User">
-                        <span>Usuário</span>
+                        {% if user.is_authenticated %}
+                            {% if user.avatar %}
+                                <img src="{{ user.avatar.url }}" alt="{{ user.username }}" style="border-radius: 50%; width: 30px; height: 30px; object-fit: cover;">
+                            {% else %}
+                                <img src="https://placehold.co/30x30/cccccc/333333?text=User" alt="Usuário Padrão" style="border-radius: 50%;">
+                            {% endif %}
+                            <span>{{ user.username }}</span>
+                        {% else %}
+                            <img src="https://placehold.co/30x30/cccccc/333333?text=User" alt="Usuário" style="border-radius: 50%;">
+                            <span>Usuário</span>
+                        {% endif %}
                         <i class="fas fa-caret-down"></i>
                     </div>
                 </div>
@@ -125,7 +134,7 @@
                         </div>
                         <div class="track-col duration">2:19</div>
                     </div>
-                    </div>
+                </div>
             </section>
         </main>
 
