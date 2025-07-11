@@ -1,0 +1,162 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="{% static 'spotify/estilo.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar-left">
+            <div class="top-nav">
+                <a href="#" class="nav-item active"><i class="fas fa-home"></i> Início</a>
+                <a href="#" class="nav-item"><i class="fas fa-search"></i> Buscar</a>
+                <a href="#" class="nav-item"><i class="fas fa-book"></i> Sua Biblioteca</a>
+            </div>
+
+            <div class="library-section">
+                <div class="library-header">
+                    <h2>Sua Biblioteca</h2>
+                    <div class="library-actions">
+                        <button><i class="fas fa-plus"></i></button>
+                        <button><i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn">Playlists</button>
+                    <button class="filter-btn">Artistas</button>
+                    <button class="filter-btn">Álbuns</button>
+                </div>
+                <div class="library-items">
+                    <div class="library-item">
+                        <img src="https://via.placeholder.com/50" alt="Capa">
+                        <div>
+                            <h3>Classica</h3>
+                            <p>Playlist • Anderson Simplicio</p>
+                        </div>
+                    </div>
+                    <div class="library-item">
+                        <img src="https://via.placeholder.com/50" alt="Capa">
+                        <div>
+                            <h3>RockNacional</h3>
+                            <p>Playlist • Anderson Simplicio</p>
+                        </div>
+                    </div>
+                    <div class="library-item">
+                        <img src="https://via.placeholder.com/50" alt="Capa">
+                        <div>
+                            <h3>Workout</h3>
+                            <p>Playlist • Anderson Simplicio</p>
+                        </div>
+                    </div>
+                    <div class="library-item active">
+                        <img src="https://via.placeholder.com/50" alt="Capa">
+                        <div>
+                            <h3>Sono Profundo</h3>
+                            <p>Playlist • Spotify</p>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="nav-arrows">
+                    <button><i class="fas fa-chevron-left"></i></button>
+                    <button><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="O que você quer ouvir?">
+                </div>
+                <div class="user-actions">
+                    <button class="install-app-btn"><i class="fas fa-download"></i> Instalar aplicativo</button>
+                    <button class="user-bell"><i class="far fa-bell"></i></button>
+                    <div class="user-profile">
+                        <img src="https://via.placeholder.com/30" alt="User">
+                        <span>Usuário</span>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <section class="playlist-section">
+                <div class="playlist-header">
+                    <img src="https://via.placeholder.com/200x200" alt="Capa Sono Profundo" class="playlist-cover">
+                    <div class="playlist-info">
+                        <p class="playlist-type">Playlist pública</p>
+                        <h1>Sono Profundo</h1>
+                        <p class="playlist-description">Buscando um sono profundo? Essa...</p>
+                        <p class="playlist-meta">Spotify • 240.354 salvamentos • 260 músicas, cerca de 12h</p>
+                    </div>
+                </div>
+
+                <div class="playlist-actions">
+                    <button class="play-btn"><i class="fas fa-play"></i></button>
+                    <button class="shuffle-btn"><i class="fas fa-shuffle"></i></button>
+                    <button class="like-btn"><i class="far fa-heart"></i></button>
+                    <button class="more-options-btn"><i class="fas fa-ellipsis-h"></i></button>
+                    <button class="list-view-btn"><i class="fas fa-list"></i> Lista</button>
+                </div>
+
+                <div class="track-list-header">
+                    <div class="track-col num">#</div>
+                    <div class="track-col title">Título</div>
+                    <div class="track-col duration"><i class="far fa-clock"></i></div>
+                </div>
+                <div class="track-list">
+                    <div class="track-item">
+                        <div class="track-col num">1</div>
+                        <div class="track-col title">
+                            <p>Deeper Dreams</p>
+                            <span>Vadodara</span>
+                        </div>
+                        <div class="track-col duration">2:51</div>
+                    </div>
+                    <div class="track-item">
+                        <div class="track-col num">2</div>
+                        <div class="track-col title">
+                            <p>Eternal Moon</p>
+                            <span>Foreglow</span>
+                        </div>
+                        <div class="track-col duration">2:19</div>
+                    </div>
+                    </div>
+            </section>
+        </main>
+
+        <aside class="sidebar-right">
+            <div class="right-panel-header">
+                <h3>Amigos</h3>
+                <i class="fas fa-user-plus"></i>
+            </div>
+            <div class="right-panel-item">
+                <div class="item-header">
+                    <h4>Sono Profundo</h4>
+                    <button><i class="fas fa-ellipsis-h"></i></button>
+                </div>
+                <img src="https://via.placeholder.com/150x150" alt="Capa Sono Profundo">
+                <p>Relaxamento para o sono.</p>
+                <p class="item-artist">Spotify</p>
+            </div>
+            <div class="right-panel-item">
+                <div class="item-header">
+                    <h4>Lunar Hope</h4>
+                    <button><i class="fas fa-ellipsis-h"></i></button>
+                </div>
+                <img src="https://via.placeholder.com/150x150" alt="Capa Lunar Hope">
+                <p>Música ambiente para meditação.</p>
+                <p class="item-artist">Foreglow</p>
+            </div>
+        </aside>
+
+        <footer class="playback-bar">
+            <p>Barra de Reprodução (Exemplo)</p>
+        </footer>
+    </div>
+</body>
+</html>
